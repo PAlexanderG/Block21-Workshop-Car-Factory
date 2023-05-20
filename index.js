@@ -24,29 +24,27 @@ class Car {
 }
 // Define the ElectricCar function as a subclass of Car.
 // Include an additional property called range
-class ElectricCar extends Range {
-  constructor(make, model, year) {
+class ElectricCar extends Car {
+  constructor(make, model, year, range) {
     // Represents the range of the electric car in miles.
     super(make, model, year);
-    this.carMilles = carMilles;
+    this.range = range;
   }
+  // Have the ElectricCar prototype override the getDescription method of the Car prototype with
+  // a new implementation that includes information about the range of the electric car.
 
   getDescription() {
     return `${super.getDescription()} range of electric in milles ${
-      this.carMilles
+      this.range
     }`;
   }
 }
-// Have the ElectricCar prototype override the getDescription method of the Car prototype with
-// a new implementation that includes information about the range of the electric car.
-let ElectricCar = {
-  shortDistance: true,
-};
-let ElectricCar2 = {
-  longDistance: true,
-};
-ElectricCar2.__proto__ = ElectricCar;
-
-// we can find both properties in rabbit now:
-alert(ElectricCar.eficiente); // true (**)
-alert(ElectricCar2.onlybatery); // true
+// Create an instance of ElectricCar:
+// with the make using (new) "Tesla", model "Model S", year 2019, and range 300,
+let myCar = new ElectricCar("Tesla", "Model S", "year 2019", "range 300");
+// calling the fuction method
+// getDescription method is called on the instance.
+myCar.getDescription();
+// and the getDescription method is called on the instance. The output will be a string containing the make,
+// model, year, and range of the electric car.
+console.log(myCar.getDescription());
