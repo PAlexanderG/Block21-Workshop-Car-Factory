@@ -40,11 +40,12 @@ class ElectricCar extends Car {
   }
 }
 // Create an instance of ElectricCar:
-// with the make using (new) "Tesla", model "Model S", year 2019, and range 300,
+// with the make using (new constuctor) "Tesla", model "Model S", year 2019, and range 300,
 let myCar = new ElectricCar("Tesla", "Model S", "year 2019", "range 300");
 // calling the fuction method
 // getDescription method is called on the instance.
 myCar.getDescription();
 // and the getDescription method is called on the instance. The output will be a string containing the make,
 // model, year, and range of the electric car.
+// using console.log with the method and variable.
 console.log(myCar.getDescription());
